@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+.crm {
+    padding: 0 10px;
+    .buttons_head {
+        padding: 0 27px!important;
+        background: #ffffff;
+        line-height: 28px;
+        height: 28px;
+        color: #666666;
+        border: 1px solid #666666;
+        font-size: 12px;
+        margin: 15px 10px 15px 15px;
+    }
+    .buttons_head:hover {
+        background: #999999;
+        color: #fff;
+        border: 1px solid #999999;
+    }
+    .CrmRightHead {
+        position: relative;
+        height: 60px;
+        .el-inputs {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            text-align: center;
+            .sou {
+                margin: 20px 0px 0px 19px;
+                color: #333333;
+                font-size: 14px;
+                height: 16px;
+                line-height: 16px;
+                border-left: 3px solid #999999;
+                padding-left: 9px;
+            }
+            .container {
+                position: relative;
+                .el-input {
+                    width: 160px;
+                    height: 30px;
+                    margin: 15px 10px;
+                    font-size: 10vm;
+                    border-radius: 50px;
+                    padding: 0;
+                    .el-input__inner {
+                        width: 160px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid #cccccc;
+                        border-radius: 4px;
+                    }
+                    .el-input__suffix-inner {
+                        position: relative;
+                        top: 7px;
+                        cursor: pointer;
+                    }
+                }
+                .el-select {
+                    width: 160px;
+                    height: 30px;
+                    margin: 15px 10px;
+                    font-size: 10vm;
+                    border-radius: 50px;
+                    padding: 0;
+                    .el-input__inner {
+                        width: 160px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid #cccccc;
+                        border-radius: 4px;
+                    }
+                    .el-input {
+                        margin: 0;
+                    }
+                    .el-input__suffix-inner {
+                        position: relative;
+                        top: 0;
+                        cursor: pointer;
+                    }
+                }
+                img{
+                    position: absolute;
+                    top: 22px;
+                    right: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .iconmin {
+        font-size: 16px;
+        color: #666666;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .foot_btn {
+        border: 1px solid #DDDDDD;
+    }
+    //底部按钮样式
+    .buttons_foot {
+        padding: 4px 15px;
+        color: #333333;
+        background: #ffffff;
+        border-radius: 20px;
+        border: 1px solid #DDDDDD;
+        font-size: 12px;
+        text-align: center;
+        margin: 8px 10px;
+        border-radius:11px;
+        position: relative;
+        .foot_btn {
+
+        }
+    }
+    //分页样式
+    .crm_page {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        .el-pagination__jump {
+            display: flex;
+            float: right;
+        }
+    }
+    //添加联系人
+    .pop_up_add_p {
+        text-align: center;
+    }
+    //form+table
+    .recordList {
+        .el-dialog__body {
+            padding: 0 30px 30px 30px!important;
+            .addCorderHead {
+                position: relative;
+                height: 60px;
+                .el-inputs {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    text-align: center;
+                    .sou {
+                        margin: 0px 0px 0px 19px;
+                    }
+                    .inputnumber {
+                        width: 160px;
+                        height: 30px;
+                        margin: 15px 10px;
+                        font-size: 10vm;
+                        border-radius: 50px;
+                        padding: 0;
+                        .el-input__prefix {
+                            display: none;
+                        }
+                        .el-input__icon {
+                            line-height: 28px;
+                        }
+                        .el-input__inner {
+                            width: 160px;
+                            height: 28px;
+                            line-height: 28px;
+                            border: 1px solid #cccccc;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+            .el-form-item__content {
+                width: 100%;
+                .el-pagination {
+                    display: flex;
+                    justify-content: flex-end;
+                    .el-pagination__jump {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    //form
+    .customerAdd,
+    .concatAdd,
+    .concatEditor,
+    .recordAdd,
+    .addrecord,
+    .appMange,
+    .customerEditor {
+        // width: 1100px;
+        .el-dialog {
+            .el-dialog__header {
+                height: 40px;
+                background: #000;
+                .el-dialog__title {
+                    color: #ffffff;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    text-align: left;
+                }
+                .el-dialog__headerbtn {
+                    line-height: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+            .el-dialog__body {
+                padding: 20px!important;
+                .el-form {
+                    width: 100%;
+                    .el-row {
+                        margin-left: 0;
+                        margin-right: 0;
+                        .el-col {
+                            box-sizing: border-box;
+                            .el-form-item {
+                                display: flex;
+                                margin-bottom: 20px;
+                                align-items: center;
+                            }
+                            .el-form-item__label {
+                                text-align: left;
+                                padding-right:0;
+                                line-height: 28px;
+                                width: 80px;
+                                font-size: 12px;
+                            }
+                            .el-form-item__content {
+                                width: 120px;
+                                line-height: 28px;
+                                .el-select {
+                                    .el-input {
+                                        margin-right: 0!important;
+                                    }
+                                }
+                                .el-date-editor {
+                                    .el-input__inner {
+                                        padding: 0 15px!important;
+                                    }
+                                    .el-input__prefix {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        .el-col {
+                            .el-form-item__content {
+                                line-height: 28px;
+                                position: relative;
+                                font-size: 12px;
+                                width: 120px;
+                                .el-input__inner {
+                                    width: 120px;
+                                }
+                                .el-input__icon {
+                                    line-height: 28px;
+                                }
+                            }
+                        }
+                    }
+                    .customerAdd_row {
+                        .el-col {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+            .el-dialog__footer {
+                padding: 0;
+                .add_clinet_box_suer {
+                    width: 90px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #fff;
+                    background: #999;
+                    border-radius: 4px;
+                    margin-right: 110px;
+                    padding: 0!important;
+                }
+                .add_clinet_box_cancel {
+                    width: 88px;
+                    height: 28px;
+                    border: 1px solid #ccc;
+                    color: #333;
+                    line-height: 28px;
+                    padding: 0!important;
+                }
+                .add_clinet_box_cancel:hover {
+                    background: #ddd;
+                }
+                .add_clinet_box_suer:hover {
+                    background: #666;
+                    color: #fff;
+                }
+            }
+        }
+        .add_clinet_box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+            div {
+                text-align: center;
+                border-radius: 4px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+.el-table__expand-icon>.el-icon {
+    position: relative;
+}
+.el-table__expanded-cell[class*=cell] {
+    padding: 10px;
+}
+
+
+

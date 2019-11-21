@@ -1,0 +1,623 @@
+#customerInquiry,
+#inquiryGrab,
+#quotationGrab,
+#quotationRequo,
+#qualityCheck,
+#quotationCompany,
+#orderCrab,
+#orderDone {
+    height : 98%;
+    display: flex;
+
+    /**===============整个页面内容开始===============*/
+    .contentBox {
+        min-width : 50%;
+        background: #ffffff;
+        padding   : 10px 10px;
+        flex      : 1;
+
+        /**==========搜索栏开始==========*/
+        .searchBox {
+            border       : 1px solid #ebeef5;
+            margin-bottom: 20px;
+            padding      : 15px 10px 0;
+            display      : flex;
+
+            /**搜索条件开始*/
+            .searchCondition {
+                padding-top: 10px;
+            }
+            .odrderLable{
+                display: inline-block;
+                line-height: 30px;
+            }
+
+            /**搜索条件结束*/
+            /**el-form样式开始*/
+            .condition {
+                // flex: 1;
+
+                /**搜索图片样式*/
+                .searchIcoClass {
+                    position   : absolute;
+                    width      : 10%;
+                    margin-left: -22px;
+                    margin-top : 10px;
+                    cursor     : pointer;
+                }
+            }
+
+            /**el-form样式结束*/
+        }
+
+        /**==========搜索栏开始===========*/
+
+        /**==========el-table样式开始==========*/
+        .el-table--border th {
+            background: #f7f7f7;
+        }
+
+        .el-table--enable-row-hover .el-table__body tr:hover>td {
+            background: initial;
+        }
+        .el-progress-bar{
+            padding-right: 0; 
+            width: 100%;
+            margin-right: 0; 
+            .el-progress-bar__outer{
+                height: 10px !important;
+                .el-progress-bar__innerText{
+                    color: #333;
+                }
+            }
+        }
+        .el-progress-bar__innerText {
+            color: #000000;
+        }
+
+        .el-table .cell {
+            i {
+                font-size     : 18px;
+                vertical-align: middle;
+                margin        : 0 5px;
+                cursor        : pointer;
+            }
+            text-overflow: clip;
+        }
+
+        /**==========el-table样式结束==========*/
+
+        /**========el-table中3D图片字体样式开始==========*/
+        .attachmentName {
+            width        : 90px;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+            white-space  : nowrap;
+            cursor       : default;
+            font-size    : 10px;
+            color        : #7b7878;
+        }
+
+        /**========el-table中3D图片字体样式结束==========*/
+
+        /**==========样子重写开始===========*/
+
+        html {
+            background-color: white;
+        }
+
+        .el-select-dropdown__item {
+            font-size: 10px;
+        }
+
+        .el-input--small .el-input__inner {
+            font-size: 10px;
+        }
+
+        .el-select el-select--small {
+            width     : 120px;
+            margin-top: 5px;
+        }
+
+        .el-table__body-wrapper {
+            .is-scrolling-left {
+                height: 100%;
+            }
+        }
+
+        /**==========样式重写结束===========*/
+
+ 
+
+        /**=======分页样式开始======*/
+        .el-pagination {
+            margin-top: 10px;
+        }
+
+        /**=======分页样式结束======*/
+
+        /**=======页面按钮样式开始(正常按钮)======*/
+        .quoAdd {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_add_default.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoEdit {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_edit_default.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+        }
+
+        .quoCopy {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_copy_default.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoSave {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_save_default.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoDelete {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_delete_default.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+            margin-right          : 15px;
+        }
+
+        .operSpanSend {
+            border-radius : 11px;
+            font-size     : 12px;
+            font-family   : Microsoft YaHei;
+            font-weight   : 400;
+            color         : rgba(51, 51, 51, 1);
+            float         : left;
+            width         : 50px;
+            padding       : 4px;
+            height        : 22px;
+            // margin-left: 5px;
+        }
+
+        .operSpanProduct {
+            border-radius: 11px;
+            font-size    : 12px;
+            font-family  : Microsoft YaHei;
+            font-weight  : 400;
+            color        : rgba(51, 51, 51, 1);
+            float        : left;
+            width        : 90px;
+            padding      : 4px;
+            height       : 22px;
+            margin-left  : 5px;
+        }
+
+        .operSpanOther {
+            border-radius: 11px;
+            font-size    : 12px;
+            font-family  : Microsoft YaHei;
+            font-weight  : 400;
+            color        : rgba(51, 51, 51, 1);
+            float        : left;
+            width        : 80px;
+            padding      : 4px;
+            height       : 22px;
+            margin-left  : 5px;
+        }
+
+        .operClear {
+            background-color: #999999;
+            border-color    : #666666;
+            color           : white;
+            width           : 80px;
+            height          : 35px;
+            border-radius   : 15px;
+        }
+
+        .operSearch {
+            width           : 80px;
+            height          : 35px;
+            border-radius   : 15px;
+            color           : #666666;
+            background-color: white;
+            border-color    : #666666;
+        }
+
+        /**=======页面按钮样式结束(正常按钮)======*/
+
+
+        /**=======页面按钮样式开始(不可用按钮)======*/
+        .quoAddDisabled {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_add_disabled.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+            cursor                : not-allowed;
+        }
+
+        .quoCopyDisabled {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_copy_disabled.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+            cursor                : not-allowed;
+        }
+
+        .quoDeleteDisabled {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_delete_disabled.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+            cursor                : not-allowed
+        }
+
+        /**=======页面按钮样式结束(不可用按钮)======*/
+
+        /**=======页面按钮样式开始(鼠标移上时)======*/
+        .quoAdd:hover {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_add_check.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoEdit:hover {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_edit_check.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+        }
+
+        .quoCopy:hover {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_copy_check.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoSave:hover {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_save_check.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            margin-left           : 15px;
+        }
+
+        .quoDelete:hover {
+            // background-position: 10px 10px;
+            background            : url(../../../assets/image/quo_delete_check.png) no-repeat;
+            background-size       : 15px 15px;
+            cursor                : pointer;
+            color                 : #ffffff05;
+            height                : 15px;
+            width                 : 15px;
+            border                : 0px;
+            // margin-left        : 15px;
+        }
+
+        .operClear:hover {
+            background-color: #999999;
+            border-color    : #666666;
+            width           : 80px;
+            height          : 35px;
+            color           : white;
+            border-radius   : 15px;
+        }
+
+        .operSearch:hover {
+            width           : 80px;
+            height          : 35px;
+            border-radius   : 15px;
+            color           : #666666;
+            background-color: white;
+            border-color    : #666666;
+
+        }
+
+        /**=======页面按钮样式结束(鼠标移上时)======*/
+    }
+
+    /**===============整个页面内容结束===============*/
+
+    /**=======对话框内容样式开始=======*/
+    .mode_file_content {
+        display   : flex;
+        flex-wrap : wrap;
+        height    : 220px;
+        overflow  : hidden;
+        overflow-y: scroll;
+        overflow-y: visible;
+
+        .mode_file_content_li {
+            position   : relative;
+            margin     : 5px;
+            display    : flex;
+            flex-flow  : column;
+            align-items: center;
+            margin-top : 5px;
+            padding-top: 5px;
+
+            img {
+                width : 50px;
+                height: 60px;
+            }
+
+            span {
+                width      : 100px;
+                height     : 20px;
+                line-height: 20px;
+                font-size  : 14px;
+            }
+
+            .mode_file_content_delete {
+                width   : 15px;
+                height  : 15px;
+                position: absolute;
+                top     : -2px;
+                right   : 5px;
+            }
+        }
+    }
+    .el-dialog__wrapper .el-dialog .el-dialog__body {
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .el-input.is-disabled .el-input__inner {
+        background-color: white;
+        border-color    : #E4E7ED;
+        color           : black;
+        cursor          : text;
+    }
+    .el-form--inline .el-form-item{
+        margin-right: 0;
+        margin-left: 13px;
+      }
+      
+      .el-form-item__label{
+        width: 100px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .el-input__inner{
+        font-size: 10px;
+        height: 30px;
+      }
+      .el-date-editor.el-input{
+          width: 150px;
+      }
+      .el-form--inline .avatarBox{
+        margin: 0;
+        float: right;
+        margin-left: 0;
+        margin-right: 20px;
+      }
+      .el-table td, .el-table th.is-leaf{
+          text-align: center;
+      }
+      /*显示所有生产商*/
+      .showAllSup{
+        float: right;
+        margin-bottom: 5px;
+      }
+      /**二级表*/
+    .el-table__expand-icon>.el-icon {
+        position: absolute;
+        /* left: 50%; */
+        /* top: 50%; */
+        top: 0;
+        left: 0;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+        /**合并表头*/
+        .el-table thead.is-group th{
+            text-align: center;
+        }
+    /**=======对话框内容样式结束=======*/
+
+    /**======上传附件按钮样式开始-=====*/
+    .footer_btn_box {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        .delete_btn {
+            width        : 90px;
+            height       : 30px;
+            font-size    : 12px;
+            line-height  : 30px;
+            border       : 1px solid #ccc;
+            border-radius: 8px;
+            text-align   : center;
+            cursor       : pointer;
+            background   : #CCCCCC;
+        }
+
+        .download_btn {
+            width        : 90px;
+            height       : 30px;
+            font-size    : 12px;
+            line-height  : 30px;
+            border       : 1px solid #ccc;
+            border-radius: 8px;
+            text-align   : center;
+            cursor       : pointer;
+            background   : #CCCCCC;
+            margin-left  : 50px;
+        }
+
+        .upload_btn {
+            width           : 90px;
+            height          : 30px;
+            font-size       : 12px;
+            line-height     : 30px;
+            border          : 1px solid #ccc;
+            border-radius   : 8px;
+            text-align      : center;
+            cursor          : pointer;
+            background-color: #f5dab1;
+            border-color    : #f5dab1;
+            margin-left     : 50px;
+        }
+    }
+    /**======上传附件按钮样式结束-=====*/
+
+    /**============二级表样式开始============*/
+    .tableStyleQuotation {
+        margin-top: 10px;
+    }
+
+    .el-table__expanded-cell[class*=cell] {
+        padding: 0px 10px 10px;
+    }
+
+    .el-select-quote {
+        width     : 80px;
+        margin-top: 5px;
+    }
+
+    .el-input-quote {
+        width     : 75px;
+        margin-top: 5px;
+    }
+
+    .divSpan {
+        letter-spacing: 7px;
+        text-align    : left;
+    }
+
+    .trimmedSize {
+        text-align: left;
+    }
+
+    .demo-table-expand{
+        overflow: scroll;
+        max-height: 500px;
+    }
+    .demo-table-expand::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }  
+     /**=======产品图片样式开始======*/
+    .el-table td .productionImg{
+        height: 100px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+     /**=======产品图片样式结束======*/
+
+      /**=======产品规格样式开始======*/
+    .el-table td .specification{
+        text-align: left;
+        p{
+            .title{
+                margin-right: 20px;
+            }
+        }
+    }
+    .editOrderNo{
+        cursor:pointer
+    }
+    .editOrderNo:hover{
+        color: #FF7A0F;
+    }
+     /**=======产品规格样式结束======*/
+
+    /**============二级表样式结束============*/
+
+    /**=======合计字体样式开始======*/
+           .footerCount {
+            font-size  : 14px;
+            font-weight: 600;
+        }
+
+    /**=======合计字体样式结束======*/
+
+    .el-dialog__wrapper.customerDialog{
+        .el-dialog__body{
+            padding: 20px 20px 0;
+        }
+        .el-form-item__label{
+            text-align: left;
+            font-size: 12px;
+            color: #333;
+            width: 72px;
+        }
+        .el-form-item__content{
+            width: 240px;
+            .el-input{
+                width: 72px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

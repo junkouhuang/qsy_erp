@@ -1,0 +1,85 @@
+#productionGrab,#production{
+    .el-table__expand-icon>.el-icon{
+        left: 50%;
+        top: 50%;
+        margin-left: -5px;
+        margin-top: -5px;
+    }
+    .el-progress-bar{
+        padding-right: 0; 
+        width: 100%;
+        margin-right: 0; 
+        .el-progress-bar__outer{
+            height: 10px !important;
+            .el-progress-bar__innerText{
+                color: #333;
+            }
+        }
+    }
+    .totalAll{
+        width: 100%;
+        display: flex;
+        border: 1px solid #ddd;
+        height: 45px;
+        line-height: 45px;
+        li{
+            width: 25%;
+            text-align: center;
+            font-size: 14px;
+            border-right: 1px solid #ddd;
+        }
+        li:nth-child(4){
+            border-right: none;
+        }
+    }
+    .el-table td .productionImg{
+        height: 100px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .el-table td .specification{
+        text-align: left;
+        p{
+            .title{
+                margin-right: 20px;
+            }
+        }
+    }
+     /**============二级表样式开始============*/
+     .tableStyleQuotation {
+        margin-top: 10px;
+    }
+    .el-table__expanded-cell[class*=cell] {
+        padding: 0 10px 10px;
+    }
+
+    .el-select-quote {
+        width     : 80px;
+        margin-top: 5px;
+    }
+
+    .el-input-quote {
+        width     : 75px;
+        margin-top: 5px;
+    }
+
+    .divSpan {
+        letter-spacing: 7px;
+        text-align    : left;
+    }
+
+    .trimmedSize {
+        text-align: left;
+    }
+    .demo-table-expand{
+        overflow: scroll;
+        max-height: 500px;
+    }
+    .demo-table-expand::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }    
+    /**============二级表样式结束============*/
+}

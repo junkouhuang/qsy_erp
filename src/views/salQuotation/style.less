@@ -1,0 +1,647 @@
+#customerInquiry,#inquiryGrab,#quotationGrab,#quotationRequo,#quotationCompany {
+  height: 98%;
+  display: flex;
+  #attachImg{
+    width: 54px;
+    height: 54px;
+  }
+  #attachImgFile{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .contentBox {
+    min-width: 50%;
+    background: #ffffff;
+    padding: 10px 10px;
+    flex: 1;
+    .searchBox {
+      border: 1px solid #ebeef5;
+      margin-bottom: 20px;
+      padding: 15px 10px 0;
+      display: flex;
+      .searchCondition {
+        padding-top: 5px;
+      }
+      .condition {
+        // margin-left: -500px;
+        flex: 1;
+        > div {
+          font-size: 12px;
+          margin-left: 10px;
+          margin-right: 0;
+          margin-bottom: 15px;
+          .el-form-item__label{
+            min-width: 68px;
+          }
+          .el-input {
+            width: 150px;
+          }
+        }
+      }
+    }
+    .el-table--border th {
+      background: #f7f7f7;
+    }
+    .el-table--enable-row-hover .el-table__body tr:hover > td {
+      background: initial;
+    }
+    .el-progress-bar__innerText {
+      color: #000000;
+    }
+    .el-table .cell{
+        i{
+            font-size: 18px;
+            vertical-align: middle;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    }
+    .addEmployeeDialog{
+      .el-dialog__header{
+        background: #2d2d2d;
+        text-align: center;
+      }
+      .el-dialog__footer{
+        text-align: center;
+      }
+      .el-dialog__body{
+        overflow: hidden;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        
+      }
+      .el-form--inline .el-form-item{
+        margin-right: 0;
+        margin-left: 13px;
+      }
+      .el-form-item__label{
+        width: 83px;
+        text-align: right;
+      }
+      .el-input__inner{
+        width: 150px;
+        padding-left: 10px;
+      }
+      .el-date-editor.el-input{
+          width: 150px;
+      }
+      .el-form--inline .avatarBox{
+        margin: 0;
+        float: right;
+        margin-left: 0;
+        margin-right: 20px;
+      }
+      .doubleItem{
+        width: 479px;
+        .el-input__inner{
+          width: 396px;
+        }
+      }
+      .avatar-uploader .el-upload {
+        border: 1px dashed #d9d9d9;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .avatar-uploader .el-upload:hover {
+        // border-color: #409EFF;
+      }
+      .avatar-uploader-icon {
+        font-size: 110px;
+        color: #8c939d;
+        width: 168px;
+        height: 168px;
+        line-height: 168px;
+        text-align: center;
+      }
+      .avatar {
+        width: 178px;
+        height: 178px;
+        display: block;
+      }
+    }
+  }
+  .attachmentName{
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+    font-size: 10px;
+    color: #7b7878;
+  }
+  .attachmentClose{
+    float: right;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+  }
+  .el-dialog__body{
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  .el-form--inline .el-form-item{
+    margin-right: 0;
+    margin-left: 13px;
+  }
+  .el-form-item__label{
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .el-input__inner{
+    font-size: 10px;
+    height: 30px;
+  }
+  .footerCount{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .el-pagination{
+    margin-top: 10px;
+  }
+  .avatar-uploader .el-upload:hover {
+    // border-color: #409EFF;
+  }
+  .quoAdd{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_add_default.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoAdd:hover{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_add_check.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+
+  .el-input.is-disabled .el-input__inner {
+    background-color: white;
+    border-color: #E4E7ED;
+    color: black;
+    cursor: text;
+  }
+  #attachImg{
+    width: 54px;
+    height: 54px;
+  }
+  #attachImgFile{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .imgBorder{
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .attachmentName{
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+    font-size: 10px;
+    color: #7b7878;
+  }
+  .attachmentClose{
+    float: right;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+  }
+  
+  html{
+    background-color: white;
+  }
+  
+  .el-select-dropdown__item{
+    font-size: 10px;
+  }
+  .el-input--small .el-input__inner{
+    font-size: 10px;
+  }
+  .el-input__inner{
+    font-size: 10px;
+  }
+  .footerCount{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .el-pagination{
+    margin-top: 10px;
+  }
+  /**添加*/
+  .operQuotation{
+    width: 15%;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .quoAdd{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_add_default.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoAdd:hover{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_add_check.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoAddDisabled{
+    // background-position: 10px 10px;
+      background: url(../../assets/image/quo_add_disabled.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      // margin-left: 15px;
+      cursor: not-allowed;
+  }
+  .quoEdit{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_edit_default.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      // margin-left: 15px;
+  }
+  .quoEdit:hover{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_edit_check.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      // margin-left: 15px;
+  }
+  .quoCopy{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_copy_default.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoCopy:hover{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_copy_check.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoCopyDisabled{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_copy_disabled.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+      cursor: not-allowed;
+  }
+  .quoSave{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_save_default.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoSave:hover{
+      // background-position: 10px 10px;
+      background: url(../../assets/image/quo_save_check.png) no-repeat;
+      background-size: 15px 15px;
+      cursor: pointer;
+      color: #ffffff05;
+      height: 15px;
+      width: 15px;
+      border: 0px;
+      margin-left: 15px;
+  }
+  .quoDelete{
+    // background-position: 10px 10px;
+    background: url(../../assets/image/quo_delete_default.png) no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+    color: #ffffff05;
+    height: 15px;
+    width: 15px;
+    border: 0px;
+    // margin-left: 15px;
+    margin-right: 15px;
+  }
+  .quoDelete:hover{
+    // background-position: 10px 10px;
+    background: url(../../assets/image/quo_delete_check.png) no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+    color: #ffffff05;
+    height: 15px;
+    width: 15px;
+    border: 0px;
+    // margin-left: 15px;
+  }
+  .quoDeleteDisabled{
+    // background-position: 10px 10px;
+    background: url(../../assets/image/quo_delete_disabled.png) no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+    color: #ffffff05;
+    height: 15px;
+    width: 15px;
+    border: 0px;
+    // margin-left: 15px;
+    cursor: not-allowed
+  }
+  .operSpanSend{
+    border-radius: 11px;
+    font-size:12px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    float: left;
+    width: 50px;
+    padding: 4px;
+    height: 22px;
+    // margin-left: 5px;
+  }
+  .operSpanProduct{
+    border-radius: 11px;
+    font-size:12px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    float: left;
+    width: 90px;
+    padding: 4px;
+    height: 22px;
+    margin-left: 5px;
+  }
+  .operSpanOther{
+    border-radius: 11px;
+    font-size:12px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    float: left;
+    width: 80px;
+    padding: 4px;
+    height: 22px;
+    margin-left: 5px;
+  }
+  
+  .operClear{
+    background-color: #999999;
+    border-color: #666666;
+    color: white;
+    width: 80px;
+    height: 35px;
+    border-radius: 15px;
+  }
+  .operClear:hover{
+    background-color: #999999;
+    border-color: #666666;
+    width: 80px;
+    height: 35px;
+    color: white;
+    border-radius: 15px;
+  }
+  .operSearch{
+    width: 80px;
+    height: 35px;
+    border-radius: 15px;
+    color: #666666;
+    background-color: white;
+    border-color: #666666;
+  }
+  .operSearch:hover{
+    width: 80px;
+    height: 35px;
+    border-radius: 15px;
+    color: #666666;
+    background-color: white;
+    border-color: #666666;
+  
+  }
+  
+  .el-dialog__title {
+    // font-size: 16px;
+    // color: #666666;
+  }
+  
+  
+  .mode_file_content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 220px;
+    overflow: hidden;
+    overflow-y:scroll;
+    overflow-y:visible;
+    .mode_file_content_li {
+      position: relative;
+      margin: 5px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin-top: 5px;
+      padding-top: 5px;
+      img {
+        width: 50px;
+        height: 60px;
+      }
+      span {
+        width: 100px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      .mode_file_content_delete {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: -2px;
+        right: 5px;
+      }
+    }
+  }
+  
+  
+  .footer_btn_box {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    .delete_btn {
+      width: 90px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      background: #CCCCCC;
+    }
+    .download_btn {
+      width: 90px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      background: #CCCCCC;
+      margin-left: 50px;
+    }
+    .upload_btn {
+      width: 90px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f5dab1;
+      border-color: #f5dab1;
+      margin-left: 50px;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }
+  
+  .searchIcoClass{
+    position: absolute;
+    width: 10%;
+    margin-left: -22px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .tableStyleQuotation{
+    margin-top: 10px;
+  }
+  
+  //二级table
+  .el-table__expanded-cell[class*=cell] {
+    padding: 0px 10px;
+  }
+  .has-gutter{
+    font-weight: 700;
+  }
+  
+  .el-select el-select--small{
+    width: 120px;
+    margin-top: 5px;
+  }
+  
+  .el-table__body-wrapper{
+    .is-scrolling-left{
+      height: 100%;
+    }
+  }
+  
+  .el-select-quote{
+    width: 80px;
+    margin-top: 5px;
+  }
+  .el-input-quote{
+      width: 75px;
+      margin-top: 5px;
+    }
+  .divSpan{
+    letter-spacing: 7px;
+    text-align: left;
+  }
+  .trimmedSize{
+    text-align: left;
+  }
+
+}
+
+
+
